@@ -18,6 +18,8 @@ class Category extends Migration
             $table->string('title', 50);
             $table->string('color', 6)->nullable();
             $table->string('icon', 15)->nullable();
+            $table->boolean('deleted')->default(0);
+            $table->dateTime('deleted_at')->nullable();
             $table->foreignId('id_user');
             $table->timestamps();
         });
