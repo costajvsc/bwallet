@@ -11,7 +11,7 @@ class PiggyBank extends Model
 
     protected $table = 'piggies_bank';
     protected $primaryKey = 'id_piggy_bank';
-    protected $fillable = ['title', 'milestone', 'color', 'icon'];
+    protected $fillable = ['title', 'milestone', 'amount', 'color', 'icon', 'id_user', 'deleted', 'deleted_at'];
 
     public function User()
     {
