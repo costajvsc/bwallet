@@ -11,7 +11,7 @@ class Payment extends Model
 
     protected $table = 'payments';
     protected $primaryKey = 'id_payment';
-    protected $fillable = ['bank', 'credit', 'billingDay', 'id_user'];
+    protected $fillable = ['bank', 'is_credit', 'billing_day', 'id_user'];
 
     public function User()
     {

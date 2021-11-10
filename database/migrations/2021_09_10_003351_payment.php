@@ -16,8 +16,8 @@ class Payment extends Migration
         Schema::create('payments', function (Blueprint $table){
             $table->bigIncrements('id_payment');
             $table->string('bank', 150);
-            $table->boolean('credit');
-            $table->integer('billingDay')->nullable();
+            $table->boolean('is_credit');
+            $table->integer('billing_day')->nullable();
             $table->boolean('deleted')->default(0);
             $table->dateTime('deleted_at')->nullable();
             $table->foreignId('id_user');

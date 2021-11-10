@@ -8,6 +8,9 @@
             <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="/payment">Payment</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="/category">Categories</a>
         </li>
         <li class="nav-item">
