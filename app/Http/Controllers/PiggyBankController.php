@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PiggyBankController extends Controller
 {
-    public function __construct()
-    {
-        $this->responseHandle = new \App\Http\Services\ResponseService();
-    }
-
     private function getPiggiesBank()
     {
         return PiggyBank::where([
