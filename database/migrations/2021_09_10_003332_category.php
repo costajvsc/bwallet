@@ -16,8 +16,8 @@ class Category extends Migration
         Schema::create('categories', function (Blueprint $table){
             $table->bigIncrements('id_category');
             $table->string('title', 50);
-            $table->string('color', 6)->nullable();
-            $table->string('icon', 15)->nullable();
+            $table->string('color', 7)->nullable();
+            $table->string('icon', 50)->nullable();
             $table->boolean('deleted')->default(0);
             $table->dateTime('deleted_at')->nullable();
             $table->foreignId('id_user');

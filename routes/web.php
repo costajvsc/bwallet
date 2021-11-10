@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('/piggy-bank')->group(function (){
-        Route::get('/', 'PiggyBankController@index')->name('piggies');
+        Route::get('/', 'PiggyBankController@index');
         Route::post('/', 'PiggyBankController@store');
 
         Route::get('/edit/{id}', 'PiggyBankController@edit');
@@ -23,6 +23,17 @@ Route::middleware(['auth'])->group(function () {
 
         Route::get('/delete/{id}', 'PiggyBankController@delete');
         Route::delete('/destroy', 'PiggyBankController@destroy');
+    });
+
+    Route::prefix('/category')->group(function (){
+        Route::get('/', 'CategoryController@index');
+        Route::post('/', 'CategoryController@store');
+
+        Route::get('/edit/{id}', 'CategoryController@edit');
+        Route::patch('/update', 'CategoryController@update');
+
+        Route::get('/delete/{id}', 'CategoryController@delete');
+        Route::delete('/destroy', 'CategoryController@destroy');
     });
 
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
