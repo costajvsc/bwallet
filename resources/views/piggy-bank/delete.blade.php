@@ -1,4 +1,4 @@
-@extends('_layout')
+@extends('layout/_layout')
 
 @section('title') Delete piggy bank {{$piggy_bank->title}} @endsection
 

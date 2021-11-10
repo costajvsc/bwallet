@@ -1,4 +1,4 @@
-@extends('_layout')
+@extends('layout/_layout')
 
 @section('title') Piggies Bank @endsection
 

@@ -1,8 +1,7 @@
-@extends('_layout')
+@extends('layout/_layout')
 
 
 @section('body')
-
     <form method="POST" class="form-login" action="/login">
         @csrf
         <div class="mb-3">
@@ -18,13 +17,5 @@
         <button class="btn btn-primary mb-3" type="submit">
             Logar
         </button>
-
-        @if($errors->any())
-            <div class="alert alert-danger">
-                @foreach($errors->all() as $error)
-                    <span class="d-block">{{ $error }}</span>
-                @endforeach
-            </div>
-        @endif
     </form>
 @endsection
