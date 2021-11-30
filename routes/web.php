@@ -47,6 +47,17 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/destroy', 'PaymentController@destroy');
     });
 
+    Route::prefix('/transaction')->group(function (){
+        Route::get('/', 'TransactionController@index');
+        Route::post('/', 'TransactionController@store');
+
+        Route::get('/edit/{id}', 'TransactionController@edit');
+        Route::patch('/update', 'TransactionController@update');
+
+        Route::get('/delete/{id}', 'TransactionController@delete');
+        Route::delete('/destroy', 'TransactionController@destroy');
+    });
+
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 });
 

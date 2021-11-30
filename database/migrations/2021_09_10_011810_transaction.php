@@ -15,17 +15,16 @@ class Transaction extends Migration
     {
         Schema::create('transactions', function (Blueprint $table){
             $table->bigIncrements('id_transaction');
-            $table->string('title', 50);
+            $table->string('transaction', 50);
             $table->decimal('amount');
-            $table->enum('type', ['Entrada', 'Saída']);
-            $table->enum('paymentMethod', ['Débito', 'Crédito', 'PIX', 'Especie']);
+            $table->tinyInteger('accounting_entry');
             $table->dateTime('occurrence_at');
             $table->foreignId('id_user');
-            $table->foreignId('id_category');
+            $table->foreignId('id_category')->nullable();
+            $table->foreignId('id_payment')->nullable();
+            $table->foreignId('id_piggy_bank')->nullable();
             $table->boolean('deleted')->default(0);
             $table->dateTime('deleted_at')->nullable();
-            $table->foreignId('id_piggy_bank')->nullable();
-            $table->foreignId('id_payment')->nullable();
             $table->timestamps();
         });
     }
