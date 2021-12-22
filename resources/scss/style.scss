@@ -1,13 +1,22 @@
 $theme-colors: (
-    "primary":  #3BE8B0,
-    "secondary": #1AAFD0,
-    "success": #3BE8B0,
-    "info": #1AAFD0,
-    "warning": #FFB900,
-    "danger": #FC636B,
-    "bg-light": #DEF2FF,
-    "bg-white": #DEF2FF,
-    "bg-dark": #374B42,
+    "primary":  #4FC1E0,
+    "secondary": #48CFAD,
+    "success": #A0D468,
+    "info": #4D9CEC,
+    "warning": #FFCE54,
+    "danger": #ED5565,
+    "bg-light": #CCD1D9,
+    "bg-white": #F5F7FA,
+    "bg-dark": #656D78,
+    "bg-black": #434A54,
+    "light": #CCD1D9,
+    "white": #F5F7FA,
+    "dark": #656D78,
+    "black": #434A54,
 
 );
+
+
+
+
 @import "~bootstrap/scss/bootstrap";

@@ -1,24 +1,38 @@
 <!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('css/tables.css')}}">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/d5e0d5b45e.js" crossorigin="anonymous"></script>
-    <title>Dwallet | @yield('title')</title>
-</head>
+@include('layout.components.__head')
 <body>
+    <header class="container">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/transaction">Transactions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/category">Categories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/payment">Payment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/piggy-bank">Piggies bank</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="/logout">Logout</a>
+            </li>
+        </ul>
+    </header>
     <div class="container">
         <div class="my-2">
-            @include('layout/message')
+            @include('layout.components.__message')
         </div>
         @yield('body')
     </div>
+    <footer class="bg-primary text-center py-4 mt-2">
+        &copy; Bwallet | 2021
+    </footer>
 </body>
-
-<script src="{{asset('js/jquery.js')}}"></script>
-<script src="{{asset('js/bootstrap.js')}}"></script>
-
+@include('layout.components.__scripts')
 </html>
