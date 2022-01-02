@@ -3,7 +3,7 @@
 @section('title') Piggies Bank @endsection
 
 @section('body')
-    <h1>Piggies bank</h1>
+    <h3 class="mt-2 mb-4"><i class="fas fa-piggy-bank"></i> Piggies bank</h3>
 
     <form action="/piggy-bank" method="post">
         @csrf
@@ -29,10 +29,11 @@
                 <input type="color" class="form-control" id="color" name="color" placeholder="Travel to California">
             </div>
         </div>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end mt-2 mb-4">
             <button type="submit" class="btn btn-primary"> <i class="fas fa-piggy-bank"></i> Create piggy bank</button>
         </div>
     </form>
 
     @include('piggy-bank/components/list')
 @endsection
+<div></div>

@@ -1,10 +1,10 @@
 @extends('layout/_layout')
 
-@section('title') Delete transaction {{$transaction->transaction}} @endsection
+@section('title') Delete {{$transaction->transaction}} Transaction @endsection
 
 @section('body')
     <div class="mt-2 mb-2">
-        <h3>Delete transaction #{{$transaction->id_transaction}}</h3>
+        <h3><i class="fas fa-file-invoice-dollar"></i> Delete transaction #{{$transaction->id_transaction}}</h3>
         <h5>Do you want delete this transaction {{$transaction->transaction}}? <span class="text-danger">All these data will be lose</span></h5>
         <ul>
             <li>

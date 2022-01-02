@@ -13,7 +13,7 @@ class PiggyBankController extends Controller
         return PiggyBank::where([
             ['id_user', Auth::user()->id_user],
             ['deleted', false]
-        ])->get();
+        ])->paginate(15);
     }
 
     public function findPiggyBank($id)
@@ -39,7 +39,7 @@ class PiggyBankController extends Controller
         ]);
     }
 
-    public function store(Request $request) 
+    public function store(Request $request)
     {
         $data = $request->all();
         $data['id_user'] = Auth::user()->id_user;

@@ -8,7 +8,7 @@
 </h4>
 
 
-<details open>
+<details>
   <summary>Table of contents</summary>
   <ol>
     <li>
@@ -35,8 +35,6 @@
   </ol>
 </details>
 
-
-
 ## About the project
 
 Bitwallet is a simple way to organize your finance transactions and monitoring your finance health through the Dashboard with the resume transactions. 
@@ -51,11 +49,17 @@ This project was developed to help people to organize yours finances transaction
 
 ## Features
 
-- [ ] User CRUD
+### Latest releases (v.0.1)
 - [x] Transaction CRUD 
-- [ ] Category CRUD
-- [ ] Payment CRUD
-- [ ] Payment CRUD
+- [x] Category CRUD
+- [x] Payment CRUD
+- [x] Payment CRUD
+
+### Upcoming release
+- [ ] User account
+- [ ] Receipt file
+- [ ] Repeat transaction
+- [ ] Lading page
 
 ## Getting started
 

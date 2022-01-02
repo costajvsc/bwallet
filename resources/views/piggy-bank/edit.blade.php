@@ -1,9 +1,9 @@
 @extends('layout/_layout')
 
-@section('title') Edit piggy bank {{$piggy_bank->title}} @endsection
+@section('title') Edit {{$piggy_bank->title}} Piggy Bank @endsection
 
 @section('body')
-    <h1>Piggies bank</h1>
+    <h3 class="mt-2 mb-4"><i class="fas fa-piggy-bank"></i> Edit Piggy Bank #{{$piggy_bank->id_piggy_bank}} </h3>
 
     <form action="/piggy-bank/update" method="post">
         @csrf
@@ -31,11 +31,12 @@
                 <input type="color" class="form-control" id="color" name="color" value="{{$piggy_bank->color}}">
             </div>
         </div>
-        <div class="d-flex justify-content-end">
-            <a href="/piggy-bank" class="btn btn-secondary me-2"><i class="fas fa-piggy-bank"></i> List of piggies banks</a>
-            <button type="submit" class="btn btn-outline-warning"><i class="fas fa-piggy-bank"></i> Update piggy bank</button>
+        <div class="d-flex justify-content-end mt-2 mb-4">
+            <a href="/piggy-bank" class="btn btn-outline-secondary me-2"><i class="fas fa-piggy-bank"></i> List of piggies banks</a>
+            <button type="submit" class="btn btn-warning"><i class="fas fa-piggy-bank"></i> Update piggy bank</button>
         </div>
     </form>
 
     @include('piggy-bank/components/list')
 @endsection
+<div></div>

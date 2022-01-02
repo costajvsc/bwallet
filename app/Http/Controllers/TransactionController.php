@@ -20,7 +20,8 @@ class TransactionController extends Controller
                         ['transactions.id_user', Auth::user()->id_user],
                         ['transactions.deleted', false]
                     ])
-                ->get();
+                    ->orderBy('occurrence_at', 'desc')
+                ->paginate(15);
     }
 
     private function findTransaction($id)

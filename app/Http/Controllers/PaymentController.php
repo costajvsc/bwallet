@@ -13,7 +13,7 @@ class PaymentController extends Controller
         return Payment::where([
             ['id_user', Auth::user()->id_user],
             ['deleted', false]
-        ])->get();
+        ])->paginate(15);
     }
 
     public function findPayment($id)
@@ -39,7 +39,7 @@ class PaymentController extends Controller
         ]);
     }
 
-    public function store(Request $request) 
+    public function store(Request $request)
     {
         $data = $request->all();
         $data['id_user'] = Auth::user()->id_user;
@@ -63,7 +63,7 @@ class PaymentController extends Controller
         $payment = $this->findPayment($request->id_payment);
 
         $payment->fill($data);
-        
+
         if(!$payment->save())
             return back()->withErrors('An error ocurred while updated the payment '.$payment['bank'].'.');
 

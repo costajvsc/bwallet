@@ -13,7 +13,7 @@ class CategoryController extends Controller
         return Category::where([
             ['id_user', Auth::user()->id_user],
             ['deleted', false]
-        ])->get();
+        ])->paginate(15);
     }
 
     public function findCategory($id)
@@ -39,7 +39,7 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function store(Request $request) 
+    public function store(Request $request)
     {
         $data = $request->all();
         $data['id_user'] = Auth::user()->id_user;
@@ -61,7 +61,7 @@ class CategoryController extends Controller
         $category = $this->findCategory($request->id_category);
 
         $category->fill($data);
-        
+
         if(!$category->save())
             return back()->withErrors('An error ocurred while updated the category '.$category['title'].'.');
 

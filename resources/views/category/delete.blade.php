@@ -1,10 +1,11 @@
 @extends('layout/_layout')
 
-@section('title') Delete category {{$category->title}} @endsection
+@section('title') Delete {{$category->title}} Category @endsection
 
 @section('body')
     <div class="mt-2 mb-2">
-        <h3>Delete category #{{$category->id_category}}</h3>
+        <h3 class="mt-2 mb-4"><i class="fas fa-list"></i> Delete category #{{$category->id_category}}</h3>
+
         <h5>Do you want delete this category {{$category->title}}? <span class="text-danger">All these data will be lose</span></h5>
         <ul>
             <li>
@@ -14,7 +15,7 @@
                 <p class="fw-bold">Color: <span class="fw-light">{{$category->color}}</span></p>
             </li>
             <li>
-                <p class="fw-bold">Icon: <span class="fw-light">({{$category->icon}})</span></p>    
+                <p class="fw-bold">Icon: <span class="fw-light">({{$category->icon}})</span></p>
             </li>
             <li>
                 <p class="fw-bold">Demo: <span class="fw-light"><i class="fas fa-{{$category->icon}}" style="color: {{$category->color}};"></i> </span></p>
@@ -33,3 +34,4 @@
     </div>
     @include('category/components/list')
 @endsection
+<div></div>

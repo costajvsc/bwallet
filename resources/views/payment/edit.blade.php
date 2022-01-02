@@ -1,9 +1,10 @@
 @extends('layout/_layout')
 
-@section('title') Edit payment {{$payment->bank}} @endsection
+@section('title') Edit {{$payment->bank}} Payment @endsection
 
 @section('body')
-    <h3>Edit payment #{{$payment->id_payment}}</h3>
+    <h3 class="mt-2 mb-4"><i class="far fa-credit-card"></i> Edit payment #{{$payment->id_payment}}</h3>
+
     <form action="/payment/update" method="post">
         @csrf
         @method('PATCH')
@@ -24,7 +25,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end mt-2 mb-4">
             <a href="/payment" class="btn btn-secondary me-2"><i class="fas fa-list"></i> List of payments</a>
             <button type="submit" class="btn btn-primary"><i class="fas fa-money-bill-wave"></i> Update payment</button>
         </div>
@@ -32,3 +33,4 @@
 
     @include('payment/components/list')
 @endsection
+<div></div>

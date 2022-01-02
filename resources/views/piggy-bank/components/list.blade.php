@@ -1,4 +1,8 @@
-<h5>Piggies Banks</h5>
+<div class="mt-2 mb-4">
+    <hr>
+</div>
+<h6 class="mt-2 mb-4"><i class="fas fa-piggy-bank"></i>  Piggies bank</h6>
+
 <table class="table table-content-beetween">
     <thead>
         <tr>
@@ -28,3 +32,6 @@
         @endforeach
     </tbody>
 </table>
+<div class="d-flex justify-content-end">
+    {{ $piggies_bank->links() }}
+</div>

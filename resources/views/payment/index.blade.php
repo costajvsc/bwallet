@@ -3,7 +3,7 @@
 @section('title') Payments @endsection
 
 @section('body')
-    <h1>Payments</h1>
+    <h3 class="mt-2 mb-4"><i class="far fa-credit-card"></i> Payments</h3>
 
     <form action="/payment" method="post">
         @csrf
@@ -23,10 +23,11 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-end mt-2 mb-4">
             <button type="submit" class="btn btn-primary"><i class="fas fa-money-bill-wave"></i> Create payment</button>
         </div>
     </form>
 
     @include('payment/components/list')
 @endsection
+<div></div>

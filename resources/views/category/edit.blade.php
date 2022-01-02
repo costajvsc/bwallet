@@ -1,9 +1,10 @@
 @extends('layout/_layout')
 
-@section('title') Edit category {{$category->title}} @endsection
+@section('title') Edit {{$category->title}} Category @endsection
 
 @section('body')
-    <h3>Edit category #{{$category->id_category}}</h3>
+    <h3 class="mt-2 mb-4"><i class="fas fa-list"></i> Edit category #{{$category->id_category}}</h3>
+
     <form action="/category/update" method="post">
         @csrf
         @method('PATCH')
@@ -30,3 +31,4 @@
 
     @include('category/components/list')
 @endsection
+<div></div>

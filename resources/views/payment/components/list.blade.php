@@ -1,5 +1,9 @@
-<h5>Payaments</h5>
-<table class="table table-content-beetween">
+<div class="mt-2 mb-4">
+    <hr>
+</div>
+<h6 class="mt-2 mb-4"><i class="far fa-credit-card"></i> Payments</h6>
+
+<table class="table table-content-beetween text-center">
     <thead>
         <tr>
             <th scope="col" class="text-start">#</th>
@@ -24,3 +28,6 @@
         @endforeach
     </tbody>
 </table>
+<div class="d-flex justify-content-end">
+    {{ $payments->links() }}
+</div>

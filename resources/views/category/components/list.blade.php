@@ -1,5 +1,9 @@
-<h5>Categories</h5>
-<table class="table table-content-beetween">
+<div class="mt-2 mb-4">
+    <hr>
+</div>
+<h6 class="mt-2 mb-4"><i class="fas fa-list"></i> Categories</h6>
+
+<table class="table table-content-beetween text-center">
     <thead>
         <tr>
             <th scope="col" class="text-start">#</th>
@@ -28,3 +32,6 @@
         @endforeach
     </tbody>
 </table>
+<div class="d-flex justify-content-end">
+    {{ $categories->links() }}
+</div>
